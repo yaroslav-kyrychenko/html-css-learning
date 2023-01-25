@@ -1,10 +1,19 @@
+/* Universal selector */
+/* * {
+  border-top: 10px solid #1098ad;
+} */
+
+body {
+  font-family: sans-serif;
+  color: #444;
+
+  border-top: 10px solid #1098ad;
+}
+
 h1,
 h2,
-h3,
-h4,
-p,
-li {
-  font-family: sans-serif;
+h3 {
+  color: #1098adc4;
 }
 
 h1 {
@@ -34,6 +43,9 @@ p {
 
 li {
   font-size: 20px;
+  /* color: #0c7c8d; */
+  /* background-color: rgba(223, 223, 223, 0.829); */
+  /* border-left: 2px solid #1098ad; */
 }
 
 /* footer p {
@@ -64,4 +76,90 @@ li {
 
 .related {
   list-style: none;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* border-left: 5px solid #1098ad; */
+}
+
+body {
+  /* background-color: blue; */
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  /* color: red; */
+}
+
+/* Misconception: this won't work */
+article p:first-child {
+  color: red;
+}
+
+/* Styling links */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  /* color: #777; */
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* Will have no effect as anchors before have pseudo-classes */
+/* a {
+  color: red;
+} */
+
+/* Resolving conflicts */
+#copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+/* A hack with !important keyword to increase the priority */
+/* footer p {
+  color: green !important;
+} */
+
+/* nav a:link,
+nav p {
+  font-size: 18px;
+} */
+
+nav {
+  font-size: 18px;
 }
