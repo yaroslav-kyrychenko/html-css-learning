@@ -27,9 +27,38 @@ p {
   text-transform: uppercase;
   background-color: #f3f3f3c5;
   padding: 10px;
+  position: relative;
 }
 
 /* PRODUCT INFORMATION */
+
+/* Absolute positioning */
+/* .sale-label {
+  position: absolute;
+  top: -18px;
+  left: -42px;
+
+  color: #fff;
+  font-size: 15px;
+  background-color: rgb(233, 23, 23);
+  letter-spacing: 2px;
+  padding: 4px 15px;
+} */
+
+/* Pseudo-element */
+.item-heading::before {
+  content: "SALE";
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(233, 23, 23);
+  letter-spacing: 2px;
+  padding: 4px 15px;
+
+  position: absolute;
+  top: -18px;
+  left: -42px;
+}
 
 .price {
   font-size: 24px;
@@ -46,6 +75,8 @@ p {
 .more-information-link:link,
 .more-information-link:visited {
   color: black;
+  display: inline-block;
+  margin-bottom: 30px;
 }
 
 .more-information-link:hover,
@@ -53,6 +84,36 @@ p {
   text-decoration: none;
 }
 
+.color-box {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+.black {
+  background-color: #000;
+}
+
+.blue {
+  background-color: #2626f7;
+}
+
+.red {
+  background-color: #ff1717;
+}
+
+.orange {
+  background-color: #fcd31c;
+}
+
+.green {
+  background-color: #15ce15;
+}
+
+.brown {
+  background-color: #9e590b;
+}
 /* PRODUCT DETAILS */
 
 .product-details-heading {
