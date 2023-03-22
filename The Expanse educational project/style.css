@@ -20,18 +20,15 @@ img {
 .books {
   display: flex;
   justify-content: space-between;
-  align-items: start;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .book {
   flex: 1;
+  border: 2px solid black;
 }
 
 .book-title {
   font-weight: bold;
-}
-
-.leviathan-wakes {
-  margin-left: 30px;
 }
