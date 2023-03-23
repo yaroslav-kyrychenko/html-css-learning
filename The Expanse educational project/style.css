@@ -10,6 +10,9 @@ body {
 
 h1 {
   font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
 }
 
 img {
@@ -18,10 +21,19 @@ img {
 }
 
 .books {
-  display: flex;
-  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  /* OLD - FLEX MODEL */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
+  /* gap: 30px; */
+
+  /* NEW - CSS GRID */
+  display: grid;
   gap: 30px;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .book {
@@ -31,4 +43,9 @@ img {
 
 .book-title {
   font-weight: bold;
+}
+
+footer {
+  margin-left: 30px;
+  margin-bottom: 15px;
 }
