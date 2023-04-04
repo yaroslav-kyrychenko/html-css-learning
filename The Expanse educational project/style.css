@@ -27,33 +27,40 @@ body {
     hsl(222deg 50% 12%) 74%,
     hsl(222deg 47% 11%) 100%
   );
-  color: rgba(245, 245, 245, 0.856);
+  color: #d1d5db;
   font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 h1 {
-  font-style: italic;
-  font-size: 39.06px;
+  font-size: 61.04px;
   margin-top: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
   margin-left: 64px;
-  /* text-align: center; */
+  font-weight: 700;
+}
+
+.book-title {
+  font-size: 24px;
 }
 
 img {
   width: 240px;
   height: 400px;
+  justify-self: center;
+  margin-bottom: 12px;
+  border-radius: 12px;
 }
 
 .books {
   margin-left: 64px;
   margin-right: 80px;
-  margin-bottom: 48px;
+  margin-bottom: 96px;
 
   display: grid;
-  gap: 80px;
-  grid-template-columns: repeat(2, 1fr);
-  /* align-items: start; */
+  gap: 96px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .book {
@@ -61,31 +68,26 @@ img {
   grid-template-rows: repeat(3, auto);
 
   border-radius: 15px;
-  padding: 15px;
-  background-image: linear-gradient(
-    45deg,
-    hsl(0deg 0% 22%) 0%,
-    hsl(344deg 0% 28%) 28%,
-    hsl(344deg 0% 33%) 45%,
-    hsl(344deg 0% 39%) 57%,
-    hsl(344deg 0% 45%) 67%,
-    hsl(344deg 0% 52%) 74%,
-    hsl(344deg 0% 58%) 81%,
-    hsl(344deg 0% 64%) 88%,
-    hsl(344deg 0% 71%) 94%,
-    hsl(0deg 0% 78%) 100%
-  );
+  padding: 20px;
+  box-shadow: 0 0 12px #4b5563;
+  transition: box-shadow 0.1s ease-in-out;
+  background-color: #374151;
+}
+
+.book:hover {
+  background-color: #4b5563;
+  box-shadow: 0 0 24px #4b5563;
+  cursor: pointer;
+}
+
+.book:active {
+  box-shadow: 0 0 16px #4b5563;
 }
 
 .book-title {
   font-weight: bold;
   margin-bottom: 12px;
   text-align: center;
-}
-
-img {
-  justify-self: center;
-  margin-bottom: 12px;
 }
 
 footer {
