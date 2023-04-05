@@ -1,4 +1,6 @@
 /*
+ICONS: https://phosphoricons.com/ 
+
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
@@ -28,7 +30,7 @@ body {
     hsl(222deg 47% 11%) 100%
   );
   color: #d1d5db;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -53,34 +55,37 @@ img {
   border-radius: 12px;
 }
 
-.books {
+.tile {
   margin-left: 64px;
   margin-right: 80px;
   margin-bottom: 96px;
+}
 
+.books {
   display: grid;
   gap: 96px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
 }
 
-.book {
+.book-card {
   display: grid;
   grid-template-rows: repeat(3, auto);
 
   border-radius: 15px;
-  padding: 20px;
+  padding: 24px;
   box-shadow: 0 0 12px #4b5563;
   transition: box-shadow 0.1s ease-in-out;
   background-color: #374151;
 }
 
-.book:hover {
+.book-card:hover {
   background-color: #4b5563;
   box-shadow: 0 0 24px #4b5563;
   cursor: pointer;
 }
 
-.book:active {
+.book-card:active {
   box-shadow: 0 0 16px #4b5563;
 }
 
@@ -88,6 +93,38 @@ img {
   font-weight: bold;
   margin-bottom: 12px;
   text-align: center;
+}
+
+.book-expanded-card {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  background-color: #374151;
+  border-radius: 15px;
+  padding: 32px;
+  font-size: 20px;
+
+  position: relative;
+  display: none;
+}
+
+.icon-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  fill: #d1d5db;
+}
+
+.icon-close:hover {
+  cursor: pointer;
+}
+
+.book-expanded-card img {
+  grid-row: 1 / span 2;
+}
+
+.book-expanded-card .book-title {
+  font-size: 31.25px;
+  text-align: left;
 }
 
 footer {
